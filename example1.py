@@ -12,7 +12,7 @@ module offers, but if you are interested in finding out more about
 them, then you can visit : https://docs.python.org/3/library/time.html
 
 There are 2 main time methods that we are interested in today:
-time.sleep(float)
+time.sleep(float) 
 time.time()
 
 time.sleep(float) will pause the program at the current point for a number

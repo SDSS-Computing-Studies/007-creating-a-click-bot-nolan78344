@@ -1,9 +1,8 @@
 import time
 import random 
-a = print("pog")
-b = print("dog")
 
 for i in range(0,10):
-    delay = random.randint(a,b)
+    delay = random.randint(2,10)
     time.sleep(1)
     print(delay)
+
