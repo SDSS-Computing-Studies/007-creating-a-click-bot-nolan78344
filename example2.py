@@ -42,7 +42,7 @@ time.sleep(2)
 i = 0
 buttonloc = p.locateCenterOnScreen("clickthis.png")
 if buttonloc is not None:    
-    print("This button is at " + str(buttonloc))
+    print("1This button is at " + str(buttonloc))
 else:
     print("could not find it")
     exit()
@@ -58,18 +58,27 @@ while True:
 #def buyresearch():
 time.sleep(2)
 i = 0
-dataloc = p.locateCenterOnScreen("data1.png")
+dataloc = p.locateCenterOnScreen("data1.png", confidence=0.8)
 if dataloc is not None:    
-    print("This button is at " + str(dataloc))
+    print("2This button is at " + str(dataloc))
 else:
     print("could not find it")
     exit()
     
 while True:
-    if cantbuyloc == p.locateCenterOnScreen("cantbuy.png"):     
+    cantbuyloc = p.locateCenterOnScreen("cantbuy.png")
+    if cantbuyloc is None:
         break
     else:
-        p.click(dataloc)
+        i = 0
+        while True:
+            i = i + 1
+            if i >= 5:       
+                break
+            else:
+                p.click(dataloc)
+        
+
 
 #def clicker()
 #def buyresearch()
