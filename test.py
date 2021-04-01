@@ -1,7 +1,6 @@
 import pyautogui as p 
 import time
 
-
 #def clicker():
 time.sleep(2)
 i = 0
@@ -33,7 +32,7 @@ else:
 i = 0
 while True:
     i = i + 1
-    if i >= 15:       
+    if i >= 1:       
         break
     else:
         p.click(dataloc)
